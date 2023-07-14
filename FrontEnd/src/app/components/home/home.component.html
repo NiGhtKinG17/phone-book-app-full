@@ -1,0 +1,100 @@
+<div>
+    <div class="row">
+        <div class="col">
+            <h5>Developed By God</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img class="opacity-100" src="{{contact.picture}}" alt="Bong" width="60%" height="400">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            Id:{{" "}} 
+        </div>
+        <div class="col-sm-8">
+            {{contact.id}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            First Name:{{" "}} 
+        </div>
+        <div class="col-sm-8">
+            {{contact.gender | genderPipe}}{{" "}}{{contact.firstname}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            Last Name:{{" "}} 
+        </div>
+        <div class="col-sm-8">
+            {{contact.lastname}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            Gender:{{" "}} 
+        </div>
+        <div class="col-sm-8">
+            {{contact.gender}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            DOB:{{" "}} 
+        </div>
+        <div class="col-sm-8">
+            {{contact.dob}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            Email:{{" "}} 
+        </div>
+        <div class="col-sm-8">
+            {{contact.email}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            Phone:{{" "}} 
+        </div>
+        <div class="col-sm-8">
+            {{contact.phone}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            City:{{" "}} 
+        </div>
+        <div class="col-sm-8">
+            {{contact.city}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            State:{{" "}} 
+        </div>
+        <div class="col-sm-8">
+            {{contact.state}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            Country:{{" "}} 
+        </div>
+        <div class="col-sm-8">
+            {{contact.country}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <button class="btn btn-success w-50 op">Edit</button>
+        </div>
+        <div class="col-sm-8">
+            <button class="btn btn-danger w-25 op">Delete</button>
+        </div>
+    </div>
+</div>

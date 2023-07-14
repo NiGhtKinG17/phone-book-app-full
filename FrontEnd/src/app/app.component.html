@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row alert alert-info">
+    <div class="col">
+      <h2>Phone Book Application</h2>
+      <p>Made in <b>Angular 13</b>{{" "}}<i>Woh Bhi Bade Pyaar se</i></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 alert alert-warning" style="height: 500px;">
+      <p>
+        <button [routerLink]="['/home']" class="btn btn-secondary" style="width: 100%;">Home</button>
+      </p>
+      <p>
+        <button [routerLink]="['/add-contact']" class="btn btn-secondary" style="width: 100%;">Add New Contact</button>
+      </p>
+      <p>
+        <button [routerLink]="['/contact-list']" class="btn btn-secondary" style="width: 100%;">Contact List</button>
+      </p>
+    </div>
+    <div class="col-sm-8 alert cl">
+      <router-outlet/>
+      <!-- <app-contact-list  /> -->
+      <!-- <add-contact /> -->
+    </div>
+  </div>
+</div>

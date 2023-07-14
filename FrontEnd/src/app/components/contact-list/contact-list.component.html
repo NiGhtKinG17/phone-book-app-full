@@ -1,0 +1,8 @@
+<h3>List Of All Contacts</h3>
+<contact-counter (onRadioChange)="filterContacts($event)" [all]="getAllContactsCount()" [male]="getMalesCount()" [female]="getFemalesCount()"/>
+<p style="color: red; font-style: italic;">{{deletemsg}}</p>
+<div class="list-group">
+    <div *ngFor="let c of contacts" class="list-group-item">
+        <single-contact (onClick)="deleteContact($event)" [c]="c" />
+    </div>
+</div>

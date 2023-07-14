@@ -1,0 +1,284 @@
+<h3>Edit Contact Details</h3>
+
+<!-- <p>{{contact|json}}</p> -->
+
+<form class="form" *ngIf="editForm" #form1="ngForm" [formGroup]="editForm">
+  <div class="row form-group">
+    <div class="col-2">
+      <label for="id">ID</label>
+    </div>
+
+    <div class="col-6">
+      <input
+        type="text"
+        formControlName="id"
+        class="form-control"
+        id="id"
+        name="id"
+        readonly
+      />
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-2">
+      <label for="firstname">First Name</label>
+    </div>
+
+    <div class="col-6">
+      <input
+        type="text"
+        formControlName="firstname"
+        class="form-control"
+        id="firstname"
+        name="firstname"
+      />
+    </div>
+
+    <div
+      *ngIf="
+        editForm.controls['firstname'].invalid &&
+        editForm.controls['firstname'].dirty
+      "
+      class="col error"
+    >
+      Invalid!
+    </div>
+
+    <div
+      *ngIf="editForm.controls['firstname'].errors?.['required'] && editForm.controls['firstname'].dirty "
+      class="col error"
+    >
+      Mandatory!
+
+      <div
+        *ngIf="editForm.controls['firstname'].errors?.['minlength'] && editForm.controls['firstname'].dirty"
+        class="col error"
+      >
+        First name should be minimum 1 letter
+
+        <div
+          *ngIf="editForm.controls['firstname'].errors?.['maxlength'] && editForm.controls['firstname'].dirty"
+          class="col error"
+        >
+          First name should be maximum 10 letters
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-2">
+      <label for="lastname">Last Name</label>
+    </div>
+
+    <div class="col-6">
+      <input
+        type="text"
+        formControlName="lastname"
+        class="form-control"
+        id="lastname"
+        name="lastname"
+      />
+    </div>
+
+    <div
+      *ngIf="
+        editForm.controls['lastname'].invalid &&
+        editForm.controls['lastname'].dirty
+      "
+      class="col error"
+    >
+      Invalid!
+    </div>
+
+    <div
+      *ngIf="editForm.controls['lastname'].errors?.['required'] && editForm.controls['lastname'].dirty"
+      class="col error"
+    >
+      Mandatory!
+
+      <div
+        *ngIf="editForm.controls['lastname'].errors?.['minlength'] && editForm.controls['lastname'].dirty"
+        class="col error"
+      >
+        First name should be minimum 1 letter
+
+        <div
+          *ngIf="editForm.controls['lastname'].errors?.['maxlength'] && editForm.controls['lastname'].dirty"
+          class="col error"
+        >
+          First name should be maximum 10 letters
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-2">
+      <label for="gender">Gender</label>
+    </div>
+
+    <div class="col">
+      <input
+        type="radio"
+        formControlName="gender"
+        id="gender"
+        name="gender"
+        value="Male"
+      />Male
+    </div>
+
+    <div class="col">
+      <input
+        type="radio"
+        formControlName="gender"
+        id="gender"
+        name="gender"
+        value="Female"
+      />Female
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-2">
+      <label for="email">Email</label>
+    </div>
+
+    <div class="col-10">
+      <input
+        type="email"
+        formControlName="email"
+        class="form-control"
+        id="email"
+        name="email"
+      />
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-2">
+      <label for="dob">Date of Birth(DD/MM/YYYY)</label>
+    </div>
+
+    <div class="col-10">
+      <input
+        type="text"
+        formControlName="dob"
+        class="form-control"
+        id="dob"
+        name="dob"
+      />
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-2">
+      <label for="phone">Phone</label>
+    </div>
+
+    <div class="col-10">
+      <input
+        type="text"
+        formControlName="phone"
+        class="form-control"
+        id="phone"
+        name="phone"
+      />
+    </div>
+
+    <div
+      *ngIf="
+        editForm.controls['lastname'].invalid &&
+        editForm.controls['lastname'].dirty
+      "
+      class="col error"
+    >
+      Invalid!
+    </div>
+
+    <div
+      *ngIf="editForm.controls['lastname'].errors?.['required'] && editForm.controls['lastname'].dirty "
+      class="col error"
+    >
+      Mandatory!
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-2">
+      <label for="city">City</label>
+    </div>
+
+    <div class="col-10">
+      <input
+        type="text"
+        formControlName="city"
+        class="form-control"
+        id="city"
+        name="city"
+      />
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-2">
+      <label for="state">State</label>
+    </div>
+
+    <div class="col-10">
+      <input
+        type="text"
+        formControlName="state"
+        class="form-control"
+        id="state"
+        name="state"
+      />
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-2">
+      <label for="country">Country</label>
+    </div>
+
+    <div class="col-10">
+      <input
+        type="text"
+        formControlName="country"
+        class="form-control"
+        id="country"
+        name="country"
+      />
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-2">
+      <label for="img">Image URL</label>
+    </div>
+
+    <div class="col-10">
+      <input
+        type="text"
+        formControlName="picture"
+        class="form-control"
+        id="img"
+        name="img"
+      />
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col">
+      <button
+        [disabled]="!editForm.valid"
+        class="btn btn-{{ editForm.valid ? 'primary' : 'danger' }} col-12"
+        style="font-weight: bold; margin: 5px"
+        (click)="saveContact(editForm.value)"
+      >
+        Save Contact
+      </button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,12 @@
+<div class="row divbg">
+    <div class="col-sm-4">
+        <img src="{{c.picture}}" width="100px" height="150px" style="border-radius: 5px;" />
+    </div>
+    <div class="col-sm-8">
+        <h4  [routerLink]="['/contact-by-id/'+c.id]">{{c.gender | genderPipe}} {{c.firstname}} {{c.lastname}}</h4>
+        <p>{{c.city}} {{c.state}}</p>
+        <p>{{c.phone}}</p>
+        <button class="btn btn-success" [routerLink]="['/edit-contact/'+c.id]">Edit</button>
+        <button class="btn btn-danger" (click)="delete(c)">Delete</button>
+    </div>
+</div>
